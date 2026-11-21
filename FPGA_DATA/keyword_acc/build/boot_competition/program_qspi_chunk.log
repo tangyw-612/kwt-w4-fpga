@@ -1,0 +1,143 @@
+
+****** Xilinx Program Flash
+****** Program Flash v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+
+Connected to hw_server @ TCP:localhost:3121
+Available targets and devices:
+Target 0 : jsn-JTAG-HS1-210512180081
+	Device 0: jsn-JTAG-HS1-210512180081-14711093-0
+	Device 1: jsn-JTAG-HS1-210512180081-5ba00477-0
+
+Retrieving Flash info...
+
+Initialization done, programming the memory
+Using default mini u-boot image file - E:/VIVADO/Vitis/2020.2/data\xicom\cfgmem\uboot\zynqmp_qspi_x4_single.bin
+===== mrd->addr=0xFF5E0204, data=0x00000222 =====
+BOOT_MODE REG = 0x0222
+WARNING: [Xicom 50-100] The current boot mode is QSPI32.
+If flash programming fails, configure device for JTAG boot mode and try again.
+Downloading FSBL...
+Running FSBL...
+Finished running FSBL.
+Xilinx Zynq MP First Stage Boot Loader 
+
+Release 2020.2   Nov 20 2026  -  23:51:58
+
+PMU-FW is not running, certain applications may not be supported.
+
+
+
+
+
+U-Boot 2020.01-00107-g4a29a62 (Oct 13 2020 - 16:50:02 -0600)
+
+
+
+Model: ZynqMP MINI QSPI SINGLE
+
+Board: Xilinx ZynqMP
+
+DRAM:  WARNING: Initializing TCM overwrites TCM content
+
+256 KiB
+
+EL Level:	EL3
+
+Multiboot:	0
+
+In:    dcc
+
+Out:   dcc
+
+Err:   dcc
+
+ZynqMP> sf probe 0 0 0
+
+
+SF: Detected n25q256ax1 with page size 256 Bytes, erase size 64 KiB, total 32 MiB
+
+ZynqMP> Sector size = 65536.
+f probe 0 0 0
+
+
+Performing Erase Operation...
+sf erase 0 40000
+
+
+SF: 262144 bytes @ 0x0 Erased: OK
+
+ZynqMP> Erase Operation successful.
+INFO: [Xicom 50-44] Elapsed time = 0 sec.
+Performing Program Operation...
+0%...sf write FFFC0000 0 20000
+
+
+device 0 offset 0x0, size 0x20000
+
+SF: 131072 bytes @ 0x0 Written: OK
+
+ZynqMP> 50%...sf write FFFC0000 20000 20000
+
+
+device 0 offset 0x20000, size 0x20000
+
+SF: 131072 bytes @ 0x20000 Written: OK
+
+ZynqMP> Program Operation successful.
+INFO: [Xicom 50-44] Elapsed time = 2 sec.
+Performing Verify Operation...
+0%...sf read FFFC0000 0 10000
+
+
+device 0 offset 0x0, size 0x10000
+
+SF: 65536 bytes @ 0x0 Read: OK
+
+ZynqMP> cmp.b FFFC0000 FFFD0000 10000
+
+
+Total of 65536 byte(s) were the same
+
+ZynqMP> sf read FFFC0000 10000 10000
+
+
+device 0 offset 0x10000, size 0x10000
+
+SF: 65536 bytes @ 0x10000 Read: OK
+
+ZynqMP> cmp.b FFFC0000 FFFD0000 10000
+
+
+Total of 65536 byte(s) were the same
+
+ZynqMP> 50%...sf read FFFC0000 20000 10000
+
+
+device 0 offset 0x20000, size 0x10000
+
+SF: 65536 bytes @ 0x20000 Read: OK
+
+ZynqMP> cmp.b FFFC0000 FFFD0000 10000
+
+
+Total of 65536 byte(s) were the same
+
+ZynqMP> sf read FFFC0000 30000 10000
+
+
+device 0 offset 0x30000, size 0x10000
+
+SF: 65536 bytes @ 0x30000 Read: OK
+
+ZynqMP> cmp.b FFFC0000 FFFD0000 10000
+
+
+Total of 65536 byte(s) were the same
+
+ZynqMP> INFO: [Xicom 50-44] Elapsed time = 3 sec.
+Verify Operation successful.
+
+Flash Operation Successful

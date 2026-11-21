@@ -1,0 +1,271 @@
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+| Date         : Fri Nov 20 01:30:04 2026
+| Host         : DESKTOP-630O49F running 64-bit major release  (build 9200)
+| Command      : report_utilization -hierarchical -hierarchical_depth 4 -file D:/key_transformer_dot/FPGA_DATA/keyword_acc/build/full_keyword_b4_competition_clear_large/route_utilization_hier.rpt
+| Design       : keyword_acc_top
+| Device       : xczu2cgsfvc784-1
+| Design State : Routed
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Utilization Design Information
+
+Table of Contents
+-----------------
+1. Utilization by Hierarchy
+
+1. Utilization by Hierarchy
+---------------------------
+
++--------------------------------------------------------------------+--------------------------------------+------------+------------+---------+------+-------+--------+--------+------+------------+
+|                              Instance                              |                Module                | Total LUTs | Logic LUTs | LUTRAMs | SRLs |  FFs  | RAMB36 | RAMB18 | URAM | DSP Blocks |
++--------------------------------------------------------------------+--------------------------------------+------------+------------+---------+------+-------+--------+--------+------+------------+
+| keyword_acc_top                                                    |                                (top) |      44956 |      44578 |      40 |  338 | 32405 |      2 |    294 |    0 |        192 |
+|   (keyword_acc_top)                                                |                                (top) |          1 |          1 |       0 |    0 |     0 |      0 |      0 |    0 |          0 |
+|   g_full.g_live_uart.u_live                                        |                    keyword_live_uart |        246 |        246 |       0 |    0 |   485 |      0 |      0 |    0 |          0 |
+|   g_full.u_demo                                                    |                    encoder_uart_demo |      42628 |      42250 |      40 |  338 | 31537 |      0 |    293 |    0 |        192 |
+|     (g_full.u_demo)                                                |                    encoder_uart_demo |        234 |        234 |       0 |    0 |   203 |      0 |      1 |    0 |          0 |
+|     g_classifier.u_head                                            |                          w4_cls_head |        580 |        540 |      40 |    0 |   169 |      0 |      0 |    0 |          2 |
+|     u_encoder                                                      |                       w4_full_stream |      41814 |      41476 |       0 |  338 | 31165 |      0 |    292 |    0 |        190 |
+|       (u_encoder)                                                  |                       w4_full_stream |        110 |        110 |       0 |    0 |    62 |      0 |      0 |    0 |          0 |
+|       u_core                                                       |                               ac_enc |      41570 |      41232 |       0 |  338 | 31103 |      0 |    292 |    0 |        190 |
+|         (u_core)                                                   |                               ac_enc |       3068 |       3050 |       0 |   18 |  1033 |      0 |      0 |    0 |          0 |
+|         g_ln_pair[0].u_ln                                          |                         ac_ln_stream |       5891 |       5731 |       0 |  160 |  4506 |      0 |      6 |    0 |         23 |
+|         g_ln_pair[1].u_ln                                          |         ac_ln_stream__parameterized0 |       5894 |       5734 |       0 |  160 |  4506 |      0 |      6 |    0 |         23 |
+|         g_mac[0].u_mac                                             |                  arch_c_mac_array__1 |       8177 |       8177 |       0 |    0 |  5389 |      0 |      0 |    0 |         66 |
+|         g_mac[1].u_mac                                             |                     arch_c_mac_array |       8177 |       8177 |       0 |    0 |  5389 |      0 |      0 |    0 |         66 |
+|         g_pair_gelu[0].u_gelu                                      |                         ffn_gelu_ihp |        489 |        489 |       0 |    0 |   251 |      0 |      8 |    0 |          0 |
+|         g_pair_gelu[1].u_gelu                                      |                      ffn_gelu_ihp__1 |        490 |        490 |       0 |    0 |   251 |      0 |      8 |    0 |          0 |
+|         g_qkv16[0].u_k16                                           | linear_requantize__parameterized0__1 |         87 |         87 |       0 |    0 |     0 |      0 |      0 |    0 |          0 |
+|         g_qkv16[0].u_q16                                           |                    linear_requantize |         89 |         89 |       0 |    0 |     0 |      0 |      0 |    0 |          0 |
+|         g_qkv16[0].u_v16                                           | linear_requantize__parameterized1__1 |         88 |         88 |       0 |    0 |     0 |      0 |      0 |    0 |          0 |
+|         g_qkv16[1].u_k16                                           |    linear_requantize__parameterized0 |         87 |         87 |       0 |    0 |     0 |      0 |      0 |    0 |          0 |
+|         g_qkv16[1].u_q16                                           |                 linear_requantize__1 |         89 |         89 |       0 |    0 |     0 |      0 |      0 |    0 |          0 |
+|         g_qkv16[1].u_v16                                           | linear_requantize__parameterized1__2 |         88 |         88 |       0 |    0 |     0 |      0 |      0 |    0 |          0 |
+|         g_row_sram[0].g_hidden_parity[0].g_hidden_half[0].u_hidden |         ac_row_store__parameterized5 |          1 |          1 |       0 |    0 |    24 |      0 |      1 |    0 |          0 |
+|         g_row_sram[0].g_hidden_parity[0].g_hidden_half[1].u_hidden |      ac_row_store__parameterized5__7 |          1 |          1 |       0 |    0 |    24 |      0 |      1 |    0 |          0 |
+|         g_row_sram[0].g_hidden_parity[1].g_hidden_half[0].u_hidden |      ac_row_store__parameterized5__6 |          1 |          1 |       0 |    0 |    24 |      0 |      1 |    0 |          0 |
+|         g_row_sram[0].g_hidden_parity[1].g_hidden_half[1].u_hidden |      ac_row_store__parameterized5__5 |          1 |          1 |       0 |    0 |    24 |      0 |      1 |    0 |          0 |
+|         g_row_sram[0].g_n1_parity[0].g_n1_tile[0].u_n1_tile        |         ac_row_store__parameterized4 |          1 |          1 |       0 |    0 |    23 |      0 |      1 |    0 |          0 |
+|         g_row_sram[0].g_n1_parity[0].g_n1_tile[1].u_n1_tile        |     ac_row_store__parameterized4__11 |          1 |          1 |       0 |    0 |    23 |      0 |      1 |    0 |          0 |
+|         g_row_sram[0].g_n1_parity[0].g_n1_tile[2].u_n1_tile        |     ac_row_store__parameterized4__10 |          1 |          1 |       0 |    0 |    23 |      0 |      1 |    0 |          0 |
+|         g_row_sram[0].g_n1_parity[1].g_n1_tile[0].u_n1_tile        |      ac_row_store__parameterized4__9 |          1 |          1 |       0 |    0 |    23 |      0 |      1 |    0 |          0 |
+|         g_row_sram[0].g_n1_parity[1].g_n1_tile[1].u_n1_tile        |      ac_row_store__parameterized4__8 |          1 |          1 |       0 |    0 |    23 |      0 |      1 |    0 |          0 |
+|         g_row_sram[0].g_n1_parity[1].g_n1_tile[2].u_n1_tile        |      ac_row_store__parameterized4__7 |          1 |          1 |       0 |    0 |    23 |      0 |      1 |    0 |          0 |
+|         g_row_sram[0].g_prob_parity[0].u_prob                      |         ac_row_store__parameterized3 |          2 |          2 |       0 |    0 |    40 |      0 |      2 |    0 |          0 |
+|         g_row_sram[0].g_prob_parity[1].u_prob                      |      ac_row_store__parameterized3__3 |          2 |          2 |       0 |    0 |    40 |      0 |      2 |    0 |          0 |
+|         g_row_sram[0].g_tile_half[0].u_af                          |      ac_row_store__parameterized2__7 |          2 |          2 |       0 |    0 |    39 |      0 |      2 |    0 |          0 |
+|         g_row_sram[0].g_tile_half[0].u_qc                          |         ac_row_store__parameterized2 |          2 |          2 |       0 |    0 |    39 |      0 |      2 |    0 |          0 |
+|         g_row_sram[0].g_tile_half[0].u_qc_odd                      |         ac_row_store__parameterized1 |          2 |          2 |       0 |    0 |    38 |      0 |      2 |    0 |          0 |
+|         g_row_sram[0].g_tile_half[1].u_af                          |      ac_row_store__parameterized2__5 |          2 |          2 |       0 |    0 |    39 |      0 |      2 |    0 |          0 |
+|         g_row_sram[0].g_tile_half[1].u_qc                          |      ac_row_store__parameterized2__6 |          2 |          2 |       0 |    0 |    39 |      0 |      2 |    0 |          0 |
+|         g_row_sram[0].g_tile_half[1].u_qc_odd                      |      ac_row_store__parameterized1__3 |          2 |          2 |       0 |    0 |    38 |      0 |      2 |    0 |          0 |
+|         g_row_sram[0].u_n1                                         |         ac_row_store__parameterized0 |          2 |          2 |       0 |    0 |    40 |      0 |      2 |    0 |          0 |
+|         g_row_sram[0].u_n1_pair_rq                                 |    linear_requantize__parameterized1 |         89 |         89 |       0 |    0 |     0 |      0 |      0 |    0 |          0 |
+|         g_row_sram[0].u_score                                      |      ac_row_store__parameterized6__1 |          2 |          2 |       0 |    0 |    41 |      0 |      2 |    0 |          0 |
+|         g_row_sram[1].g_hidden_parity[0].g_hidden_half[0].u_hidden |      ac_row_store__parameterized5__4 |          1 |          1 |       0 |    0 |    24 |      0 |      1 |    0 |          0 |
+|         g_row_sram[1].g_hidden_parity[0].g_hidden_half[1].u_hidden |      ac_row_store__parameterized5__3 |          1 |          1 |       0 |    0 |    24 |      0 |      1 |    0 |          0 |
+|         g_row_sram[1].g_hidden_parity[1].g_hidden_half[0].u_hidden |      ac_row_store__parameterized5__2 |          1 |          1 |       0 |    0 |    24 |      0 |      1 |    0 |          0 |
+|         g_row_sram[1].g_hidden_parity[1].g_hidden_half[1].u_hidden |      ac_row_store__parameterized5__1 |          1 |          1 |       0 |    0 |    24 |      0 |      1 |    0 |          0 |
+|         g_row_sram[1].g_n1_parity[0].g_n1_tile[0].u_n1_tile        |      ac_row_store__parameterized4__6 |          1 |          1 |       0 |    0 |    23 |      0 |      1 |    0 |          0 |
+|         g_row_sram[1].g_n1_parity[0].g_n1_tile[1].u_n1_tile        |      ac_row_store__parameterized4__5 |          1 |          1 |       0 |    0 |    23 |      0 |      1 |    0 |          0 |
+|         g_row_sram[1].g_n1_parity[0].g_n1_tile[2].u_n1_tile        |      ac_row_store__parameterized4__4 |          1 |          1 |       0 |    0 |    23 |      0 |      1 |    0 |          0 |
+|         g_row_sram[1].g_n1_parity[1].g_n1_tile[0].u_n1_tile        |      ac_row_store__parameterized4__3 |          1 |          1 |       0 |    0 |    23 |      0 |      1 |    0 |          0 |
+|         g_row_sram[1].g_n1_parity[1].g_n1_tile[1].u_n1_tile        |      ac_row_store__parameterized4__2 |          1 |          1 |       0 |    0 |    23 |      0 |      1 |    0 |          0 |
+|         g_row_sram[1].g_n1_parity[1].g_n1_tile[2].u_n1_tile        |      ac_row_store__parameterized4__1 |          1 |          1 |       0 |    0 |    23 |      0 |      1 |    0 |          0 |
+|         g_row_sram[1].g_prob_parity[0].u_prob                      |      ac_row_store__parameterized3__2 |          2 |          2 |       0 |    0 |    40 |      0 |      2 |    0 |          0 |
+|         g_row_sram[1].g_prob_parity[1].u_prob                      |      ac_row_store__parameterized3__1 |          2 |          2 |       0 |    0 |    40 |      0 |      2 |    0 |          0 |
+|         g_row_sram[1].g_tile_half[0].u_af                          |      ac_row_store__parameterized2__3 |          2 |          2 |       0 |    0 |    39 |      0 |      2 |    0 |          0 |
+|         g_row_sram[1].g_tile_half[0].u_qc                          |      ac_row_store__parameterized2__4 |          2 |          2 |       0 |    0 |    39 |      0 |      2 |    0 |          0 |
+|         g_row_sram[1].g_tile_half[0].u_qc_odd                      |      ac_row_store__parameterized1__2 |          2 |          2 |       0 |    0 |    38 |      0 |      2 |    0 |          0 |
+|         g_row_sram[1].g_tile_half[1].u_af                          |      ac_row_store__parameterized2__1 |          2 |          2 |       0 |    0 |    39 |      0 |      2 |    0 |          0 |
+|         g_row_sram[1].g_tile_half[1].u_qc                          |      ac_row_store__parameterized2__2 |          2 |          2 |       0 |    0 |    39 |      0 |      2 |    0 |          0 |
+|         g_row_sram[1].g_tile_half[1].u_qc_odd                      |      ac_row_store__parameterized1__1 |          2 |          2 |       0 |    0 |    38 |      0 |      2 |    0 |          0 |
+|         g_row_sram[1].u_n1                                         |      ac_row_store__parameterized0__3 |          2 |          2 |       0 |    0 |    40 |      0 |      2 |    0 |          0 |
+|         g_row_sram[1].u_n1_pair_rq                                 | linear_requantize__parameterized1__3 |         89 |         89 |       0 |    0 |     0 |      0 |      0 |    0 |          0 |
+|         g_row_sram[1].u_score                                      |         ac_row_store__parameterized6 |          2 |          2 |       0 |    0 |    41 |      0 |      2 |    0 |          0 |
+|         g_softmax_lane[0].u_exp                                    |                  attention_table_ihp |        103 |        103 |       0 |    0 |   160 |      0 |      8 |    0 |          0 |
+|         g_softmax_lane[0].u_sm                                     |                 attention_softmax__1 |       3976 |       3976 |       0 |    0 |  2015 |      0 |      2 |    0 |          6 |
+|         g_softmax_lane[1].u_exp                                    |               attention_table_ihp__1 |        103 |        103 |       0 |    0 |   160 |      0 |      8 |    0 |          0 |
+|         g_softmax_lane[1].u_sm                                     |                    attention_softmax |       3980 |       3980 |       0 |    0 |  2015 |      0 |      2 |    0 |          6 |
+|         lane_mem[0].u_k_even                                       |                      ac_row_store__1 |          1 |          1 |       0 |    0 |    25 |      0 |      1 |    0 |          0 |
+|         lane_mem[0].u_k_odd                                        |                      ac_row_store__3 |          1 |          1 |       0 |    0 |    25 |      0 |      1 |    0 |          0 |
+|         lane_mem[0].u_v_even                                       |                      ac_row_store__2 |          1 |          1 |       0 |    0 |    25 |      0 |      1 |    0 |          0 |
+|         lane_mem[0].u_v_odd                                        |                      ac_row_store__4 |          1 |          1 |       0 |    0 |    25 |      0 |      1 |    0 |          0 |
+|         lane_mem[0].u_weight                                       |                          ac_mem16__1 |          1 |          1 |       0 |    0 |    28 |      0 |      1 |    0 |          0 |
+|         lane_mem[10].u_k_even                                      |                     ac_row_store__41 |          1 |          1 |       0 |    0 |    25 |      0 |      1 |    0 |          0 |
+|         lane_mem[10].u_k_odd                                       |                     ac_row_store__43 |          1 |          1 |       0 |    0 |    25 |      0 |      1 |    0 |          0 |
+|         lane_mem[10].u_v_even                                      |                     ac_row_store__42 |          1 |          1 |       0 |    0 |    24 |      0 |      1 |    0 |          0 |
+|         lane_mem[10].u_v_odd                                       |                     ac_row_store__44 |          1 |          1 |       0 |    0 |    20 |      0 |      1 |    0 |          0 |
+|         lane_mem[10].u_weight                                      |                         ac_mem16__11 |          1 |          1 |       0 |    0 |    28 |      0 |      1 |    0 |          0 |
+|         lane_mem[11].u_k_even                                      |                     ac_row_store__45 |          1 |          1 |       0 |    0 |    25 |      0 |      1 |    0 |          0 |
+|         lane_mem[11].u_k_odd                                       |                     ac_row_store__47 |          1 |          1 |       0 |    0 |    25 |      0 |      1 |    0 |          0 |
+|         lane_mem[11].u_v_even                                      |                     ac_row_store__46 |          1 |          1 |       0 |    0 |    20 |      0 |      1 |    0 |          0 |
+|         lane_mem[11].u_v_odd                                       |                     ac_row_store__48 |          1 |          1 |       0 |    0 |    25 |      0 |      1 |    0 |          0 |
+|         lane_mem[11].u_weight                                      |                         ac_mem16__12 |          1 |          1 |       0 |    0 |    28 |      0 |      1 |    0 |          0 |
+|         lane_mem[12].u_k_even                                      |                     ac_row_store__49 |          1 |          1 |       0 |    0 |    25 |      0 |      1 |    0 |          0 |
+|         lane_mem[12].u_k_odd                                       |                     ac_row_store__51 |          1 |          1 |       0 |    0 |    25 |      0 |      1 |    0 |          0 |
+|         lane_mem[12].u_v_even                                      |                     ac_row_store__50 |          1 |          1 |       0 |    0 |    24 |      0 |      1 |    0 |          0 |
+|         lane_mem[12].u_v_odd                                       |                     ac_row_store__52 |          1 |          1 |       0 |    0 |    23 |      0 |      1 |    0 |          0 |
+|         lane_mem[12].u_weight                                      |                         ac_mem16__13 |          1 |          1 |       0 |    0 |    28 |      0 |      1 |    0 |          0 |
+|         lane_mem[13].u_k_even                                      |                     ac_row_store__53 |          1 |          1 |       0 |    0 |    25 |      0 |      1 |    0 |          0 |
+|         lane_mem[13].u_k_odd                                       |                     ac_row_store__55 |          1 |          1 |       0 |    0 |    25 |      0 |      1 |    0 |          0 |
+|         lane_mem[13].u_v_even                                      |                     ac_row_store__54 |          1 |          1 |       0 |    0 |    20 |      0 |      1 |    0 |          0 |
+|         lane_mem[13].u_v_odd                                       |                     ac_row_store__56 |          1 |          1 |       0 |    0 |    20 |      0 |      1 |    0 |          0 |
+|         lane_mem[13].u_weight                                      |                         ac_mem16__14 |          1 |          1 |       0 |    0 |    28 |      0 |      1 |    0 |          0 |
+|         lane_mem[14].u_k_even                                      |                     ac_row_store__57 |          1 |          1 |       0 |    0 |    25 |      0 |      1 |    0 |          0 |
+|         lane_mem[14].u_k_odd                                       |                     ac_row_store__59 |          1 |          1 |       0 |    0 |    25 |      0 |      1 |    0 |          0 |
+|         lane_mem[14].u_v_even                                      |                     ac_row_store__58 |          1 |          1 |       0 |    0 |    20 |      0 |      1 |    0 |          0 |
+|         lane_mem[14].u_v_odd                                       |                     ac_row_store__60 |          1 |          1 |       0 |    0 |    23 |      0 |      1 |    0 |          0 |
+|         lane_mem[14].u_weight                                      |                         ac_mem16__15 |          1 |          1 |       0 |    0 |    28 |      0 |      1 |    0 |          0 |
+|         lane_mem[15].u_k_even                                      |                     ac_row_store__61 |          1 |          1 |       0 |    0 |    25 |      0 |      1 |    0 |          0 |
+|         lane_mem[15].u_k_odd                                       |                     ac_row_store__63 |          1 |          1 |       0 |    0 |    25 |      0 |      1 |    0 |          0 |
+|         lane_mem[15].u_v_even                                      |                     ac_row_store__62 |          1 |          1 |       0 |    0 |    25 |      0 |      1 |    0 |          0 |
+|         lane_mem[15].u_v_odd                                       |                     ac_row_store__64 |          1 |          1 |       0 |    0 |    25 |      0 |      1 |    0 |          0 |
+|         lane_mem[15].u_weight                                      |                         ac_mem16__16 |          1 |          1 |       0 |    0 |    28 |      0 |      1 |    0 |          0 |
+|         lane_mem[16].u_k_even                                      |                     ac_row_store__65 |          1 |          1 |       0 |    0 |    25 |      0 |      1 |    0 |          0 |
+|         lane_mem[16].u_k_odd                                       |                     ac_row_store__67 |          1 |          1 |       0 |    0 |    25 |      0 |      1 |    0 |          0 |
+|         lane_mem[16].u_v_even                                      |                     ac_row_store__66 |          1 |          1 |       0 |    0 |    25 |      0 |      1 |    0 |          0 |
+|         lane_mem[16].u_v_odd                                       |                     ac_row_store__68 |          1 |          1 |       0 |    0 |    19 |      0 |      1 |    0 |          0 |
+|         lane_mem[16].u_weight                                      |                         ac_mem16__17 |          1 |          1 |       0 |    0 |    28 |      0 |      1 |    0 |          0 |
+|         lane_mem[17].u_k_even                                      |                     ac_row_store__69 |          1 |          1 |       0 |    0 |    25 |      0 |      1 |    0 |          0 |
+|         lane_mem[17].u_k_odd                                       |                     ac_row_store__71 |          1 |          1 |       0 |    0 |    25 |      0 |      1 |    0 |          0 |
+|         lane_mem[17].u_v_even                                      |                     ac_row_store__70 |          1 |          1 |       0 |    0 |    19 |      0 |      1 |    0 |          0 |
+|         lane_mem[17].u_v_odd                                       |                     ac_row_store__72 |          1 |          1 |       0 |    0 |    18 |      0 |      1 |    0 |          0 |
+|         lane_mem[17].u_weight                                      |                         ac_mem16__18 |          1 |          1 |       0 |    0 |    28 |      0 |      1 |    0 |          0 |
+|         lane_mem[18].u_k_even                                      |                     ac_row_store__73 |          1 |          1 |       0 |    0 |    25 |      0 |      1 |    0 |          0 |
+|         lane_mem[18].u_k_odd                                       |                     ac_row_store__75 |          1 |          1 |       0 |    0 |    25 |      0 |      1 |    0 |          0 |
+|         lane_mem[18].u_v_even                                      |                     ac_row_store__74 |          1 |          1 |       0 |    0 |    23 |      0 |      1 |    0 |          0 |
+|         lane_mem[18].u_v_odd                                       |                     ac_row_store__76 |          1 |          1 |       0 |    0 |    20 |      0 |      1 |    0 |          0 |
+|         lane_mem[18].u_weight                                      |                         ac_mem16__19 |          1 |          1 |       0 |    0 |    28 |      0 |      1 |    0 |          0 |
+|         lane_mem[19].u_k_even                                      |                     ac_row_store__77 |          1 |          1 |       0 |    0 |    25 |      0 |      1 |    0 |          0 |
+|         lane_mem[19].u_k_odd                                       |                     ac_row_store__79 |          1 |          1 |       0 |    0 |    25 |      0 |      1 |    0 |          0 |
+|         lane_mem[19].u_v_even                                      |                     ac_row_store__78 |          1 |          1 |       0 |    0 |    20 |      0 |      1 |    0 |          0 |
+|         lane_mem[19].u_v_odd                                       |                     ac_row_store__80 |          1 |          1 |       0 |    0 |    20 |      0 |      1 |    0 |          0 |
+|         lane_mem[19].u_weight                                      |                         ac_mem16__20 |          1 |          1 |       0 |    0 |    28 |      0 |      1 |    0 |          0 |
+|         lane_mem[1].u_k_even                                       |                      ac_row_store__5 |          1 |          1 |       0 |    0 |    25 |      0 |      1 |    0 |          0 |
+|         lane_mem[1].u_k_odd                                        |                      ac_row_store__7 |          1 |          1 |       0 |    0 |    25 |      0 |      1 |    0 |          0 |
+|         lane_mem[1].u_v_even                                       |                      ac_row_store__6 |          1 |          1 |       0 |    0 |    24 |      0 |      1 |    0 |          0 |
+|         lane_mem[1].u_v_odd                                        |                      ac_row_store__8 |          1 |          1 |       0 |    0 |    24 |      0 |      1 |    0 |          0 |
+|         lane_mem[1].u_weight                                       |                          ac_mem16__2 |          1 |          1 |       0 |    0 |    28 |      0 |      1 |    0 |          0 |
+|         lane_mem[20].u_k_even                                      |                     ac_row_store__81 |          1 |          1 |       0 |    0 |    25 |      0 |      1 |    0 |          0 |
+|         lane_mem[20].u_k_odd                                       |                     ac_row_store__83 |          1 |          1 |       0 |    0 |    25 |      0 |      1 |    0 |          0 |
+|         lane_mem[20].u_v_even                                      |                     ac_row_store__82 |          1 |          1 |       0 |    0 |    23 |      0 |      1 |    0 |          0 |
+|         lane_mem[20].u_v_odd                                       |                     ac_row_store__84 |          1 |          1 |       0 |    0 |    19 |      0 |      1 |    0 |          0 |
+|         lane_mem[20].u_weight                                      |                         ac_mem16__21 |          1 |          1 |       0 |    0 |    28 |      0 |      1 |    0 |          0 |
+|         lane_mem[21].u_k_even                                      |                     ac_row_store__85 |          1 |          1 |       0 |    0 |    25 |      0 |      1 |    0 |          0 |
+|         lane_mem[21].u_k_odd                                       |                     ac_row_store__87 |          1 |          1 |       0 |    0 |    25 |      0 |      1 |    0 |          0 |
+|         lane_mem[21].u_v_even                                      |                     ac_row_store__86 |          1 |          1 |       0 |    0 |    24 |      0 |      1 |    0 |          0 |
+|         lane_mem[21].u_v_odd                                       |                     ac_row_store__88 |          1 |          1 |       0 |    0 |    22 |      0 |      1 |    0 |          0 |
+|         lane_mem[21].u_weight                                      |                         ac_mem16__22 |          1 |          1 |       0 |    0 |    28 |      0 |      1 |    0 |          0 |
+|         lane_mem[22].u_k_even                                      |                     ac_row_store__89 |          1 |          1 |       0 |    0 |    25 |      0 |      1 |    0 |          0 |
+|         lane_mem[22].u_k_odd                                       |                     ac_row_store__91 |          1 |          1 |       0 |    0 |    25 |      0 |      1 |    0 |          0 |
+|         lane_mem[22].u_v_even                                      |                     ac_row_store__90 |          1 |          1 |       0 |    0 |    21 |      0 |      1 |    0 |          0 |
+|         lane_mem[22].u_v_odd                                       |                     ac_row_store__92 |          1 |          1 |       0 |    0 |    24 |      0 |      1 |    0 |          0 |
+|         lane_mem[22].u_weight                                      |                         ac_mem16__23 |          1 |          1 |       0 |    0 |    28 |      0 |      1 |    0 |          0 |
+|         lane_mem[23].u_k_even                                      |                     ac_row_store__93 |          1 |          1 |       0 |    0 |    25 |      0 |      1 |    0 |          0 |
+|         lane_mem[23].u_k_odd                                       |                     ac_row_store__95 |          1 |          1 |       0 |    0 |    25 |      0 |      1 |    0 |          0 |
+|         lane_mem[23].u_v_even                                      |                     ac_row_store__94 |          1 |          1 |       0 |    0 |    23 |      0 |      1 |    0 |          0 |
+|         lane_mem[23].u_v_odd                                       |                     ac_row_store__96 |          1 |          1 |       0 |    0 |    21 |      0 |      1 |    0 |          0 |
+|         lane_mem[23].u_weight                                      |                         ac_mem16__24 |          1 |          1 |       0 |    0 |    28 |      0 |      1 |    0 |          0 |
+|         lane_mem[24].u_k_even                                      |                     ac_row_store__97 |          1 |          1 |       0 |    0 |    25 |      0 |      1 |    0 |          0 |
+|         lane_mem[24].u_k_odd                                       |                     ac_row_store__99 |          1 |          1 |       0 |    0 |    25 |      0 |      1 |    0 |          0 |
+|         lane_mem[24].u_v_even                                      |                     ac_row_store__98 |          1 |          1 |       0 |    0 |    22 |      0 |      1 |    0 |          0 |
+|         lane_mem[24].u_v_odd                                       |                    ac_row_store__100 |          1 |          1 |       0 |    0 |    25 |      0 |      1 |    0 |          0 |
+|         lane_mem[24].u_weight                                      |                         ac_mem16__25 |          1 |          1 |       0 |    0 |    28 |      0 |      1 |    0 |          0 |
+|         lane_mem[25].u_k_even                                      |                    ac_row_store__101 |          1 |          1 |       0 |    0 |    25 |      0 |      1 |    0 |          0 |
+|         lane_mem[25].u_k_odd                                       |                    ac_row_store__103 |          1 |          1 |       0 |    0 |    25 |      0 |      1 |    0 |          0 |
+|         lane_mem[25].u_v_even                                      |                    ac_row_store__102 |          1 |          1 |       0 |    0 |    22 |      0 |      1 |    0 |          0 |
+|         lane_mem[25].u_v_odd                                       |                    ac_row_store__104 |          1 |          1 |       0 |    0 |    20 |      0 |      1 |    0 |          0 |
+|         lane_mem[25].u_weight                                      |                         ac_mem16__26 |          1 |          1 |       0 |    0 |    28 |      0 |      1 |    0 |          0 |
+|         lane_mem[26].u_k_even                                      |                    ac_row_store__105 |          1 |          1 |       0 |    0 |    25 |      0 |      1 |    0 |          0 |
+|         lane_mem[26].u_k_odd                                       |                    ac_row_store__107 |          1 |          1 |       0 |    0 |    25 |      0 |      1 |    0 |          0 |
+|         lane_mem[26].u_v_even                                      |                    ac_row_store__106 |          1 |          1 |       0 |    0 |    25 |      0 |      1 |    0 |          0 |
+|         lane_mem[26].u_v_odd                                       |                    ac_row_store__108 |          1 |          1 |       0 |    0 |    24 |      0 |      1 |    0 |          0 |
+|         lane_mem[26].u_weight                                      |                         ac_mem16__27 |          1 |          1 |       0 |    0 |    28 |      0 |      1 |    0 |          0 |
+|         lane_mem[27].u_k_even                                      |                    ac_row_store__109 |          1 |          1 |       0 |    0 |    25 |      0 |      1 |    0 |          0 |
+|         lane_mem[27].u_k_odd                                       |                    ac_row_store__111 |          1 |          1 |       0 |    0 |    25 |      0 |      1 |    0 |          0 |
+|         lane_mem[27].u_v_even                                      |                    ac_row_store__110 |          1 |          1 |       0 |    0 |    24 |      0 |      1 |    0 |          0 |
+|         lane_mem[27].u_v_odd                                       |                    ac_row_store__112 |          1 |          1 |       0 |    0 |    22 |      0 |      1 |    0 |          0 |
+|         lane_mem[27].u_weight                                      |                         ac_mem16__28 |          1 |          1 |       0 |    0 |    28 |      0 |      1 |    0 |          0 |
+|         lane_mem[28].u_k_even                                      |                    ac_row_store__113 |          1 |          1 |       0 |    0 |    25 |      0 |      1 |    0 |          0 |
+|         lane_mem[28].u_k_odd                                       |                    ac_row_store__115 |          1 |          1 |       0 |    0 |    25 |      0 |      1 |    0 |          0 |
+|         lane_mem[28].u_v_even                                      |                    ac_row_store__114 |          1 |          1 |       0 |    0 |    23 |      0 |      1 |    0 |          0 |
+|         lane_mem[28].u_v_odd                                       |                    ac_row_store__116 |          1 |          1 |       0 |    0 |    20 |      0 |      1 |    0 |          0 |
+|         lane_mem[28].u_weight                                      |                         ac_mem16__29 |          1 |          1 |       0 |    0 |    28 |      0 |      1 |    0 |          0 |
+|         lane_mem[29].u_k_even                                      |                    ac_row_store__117 |          1 |          1 |       0 |    0 |    25 |      0 |      1 |    0 |          0 |
+|         lane_mem[29].u_k_odd                                       |                    ac_row_store__119 |          1 |          1 |       0 |    0 |    25 |      0 |      1 |    0 |          0 |
+|         lane_mem[29].u_v_even                                      |                    ac_row_store__118 |          1 |          1 |       0 |    0 |    22 |      0 |      1 |    0 |          0 |
+|         lane_mem[29].u_v_odd                                       |                    ac_row_store__120 |          1 |          1 |       0 |    0 |    25 |      0 |      1 |    0 |          0 |
+|         lane_mem[29].u_weight                                      |                         ac_mem16__30 |          1 |          1 |       0 |    0 |    28 |      0 |      1 |    0 |          0 |
+|         lane_mem[2].u_k_even                                       |                      ac_row_store__9 |          1 |          1 |       0 |    0 |    25 |      0 |      1 |    0 |          0 |
+|         lane_mem[2].u_k_odd                                        |                     ac_row_store__11 |          1 |          1 |       0 |    0 |    25 |      0 |      1 |    0 |          0 |
+|         lane_mem[2].u_v_even                                       |                     ac_row_store__10 |          1 |          1 |       0 |    0 |    25 |      0 |      1 |    0 |          0 |
+|         lane_mem[2].u_v_odd                                        |                     ac_row_store__12 |          1 |          1 |       0 |    0 |    21 |      0 |      1 |    0 |          0 |
+|         lane_mem[2].u_weight                                       |                          ac_mem16__3 |          1 |          1 |       0 |    0 |    28 |      0 |      1 |    0 |          0 |
+|         lane_mem[30].u_k_even                                      |                    ac_row_store__121 |          1 |          1 |       0 |    0 |    25 |      0 |      1 |    0 |          0 |
+|         lane_mem[30].u_k_odd                                       |                    ac_row_store__123 |          1 |          1 |       0 |    0 |    25 |      0 |      1 |    0 |          0 |
+|         lane_mem[30].u_v_even                                      |                    ac_row_store__122 |          1 |          1 |       0 |    0 |    22 |      0 |      1 |    0 |          0 |
+|         lane_mem[30].u_v_odd                                       |                    ac_row_store__124 |          1 |          1 |       0 |    0 |    20 |      0 |      1 |    0 |          0 |
+|         lane_mem[30].u_weight                                      |                         ac_mem16__31 |          1 |          1 |       0 |    0 |    28 |      0 |      1 |    0 |          0 |
+|         lane_mem[31].u_k_even                                      |                    ac_row_store__125 |          1 |          1 |       0 |    0 |    25 |      0 |      1 |    0 |          0 |
+|         lane_mem[31].u_k_odd                                       |                    ac_row_store__127 |          1 |          1 |       0 |    0 |    25 |      0 |      1 |    0 |          0 |
+|         lane_mem[31].u_v_even                                      |                    ac_row_store__126 |          1 |          1 |       0 |    0 |    25 |      0 |      1 |    0 |          0 |
+|         lane_mem[31].u_v_odd                                       |                         ac_row_store |          1 |          1 |       0 |    0 |    25 |      0 |      1 |    0 |          0 |
+|         lane_mem[31].u_weight                                      |                         ac_mem16__32 |          1 |          1 |       0 |    0 |    28 |      0 |      1 |    0 |          0 |
+|         lane_mem[3].u_k_even                                       |                     ac_row_store__13 |          1 |          1 |       0 |    0 |    25 |      0 |      1 |    0 |          0 |
+|         lane_mem[3].u_k_odd                                        |                     ac_row_store__15 |          1 |          1 |       0 |    0 |    25 |      0 |      1 |    0 |          0 |
+|         lane_mem[3].u_v_even                                       |                     ac_row_store__14 |          1 |          1 |       0 |    0 |    25 |      0 |      1 |    0 |          0 |
+|         lane_mem[3].u_v_odd                                        |                     ac_row_store__16 |          1 |          1 |       0 |    0 |    25 |      0 |      1 |    0 |          0 |
+|         lane_mem[3].u_weight                                       |                          ac_mem16__4 |          1 |          1 |       0 |    0 |    28 |      0 |      1 |    0 |          0 |
+|         lane_mem[4].u_k_even                                       |                     ac_row_store__17 |          1 |          1 |       0 |    0 |    25 |      0 |      1 |    0 |          0 |
+|         lane_mem[4].u_k_odd                                        |                     ac_row_store__19 |          1 |          1 |       0 |    0 |    25 |      0 |      1 |    0 |          0 |
+|         lane_mem[4].u_v_even                                       |                     ac_row_store__18 |          1 |          1 |       0 |    0 |    18 |      0 |      1 |    0 |          0 |
+|         lane_mem[4].u_v_odd                                        |                     ac_row_store__20 |          1 |          1 |       0 |    0 |    23 |      0 |      1 |    0 |          0 |
+|         lane_mem[4].u_weight                                       |                          ac_mem16__5 |          1 |          1 |       0 |    0 |    28 |      0 |      1 |    0 |          0 |
+|         lane_mem[5].u_k_even                                       |                     ac_row_store__21 |          1 |          1 |       0 |    0 |    25 |      0 |      1 |    0 |          0 |
+|         lane_mem[5].u_k_odd                                        |                     ac_row_store__23 |          1 |          1 |       0 |    0 |    25 |      0 |      1 |    0 |          0 |
+|         lane_mem[5].u_v_even                                       |                     ac_row_store__22 |          1 |          1 |       0 |    0 |    25 |      0 |      1 |    0 |          0 |
+|         lane_mem[5].u_v_odd                                        |                     ac_row_store__24 |          1 |          1 |       0 |    0 |    19 |      0 |      1 |    0 |          0 |
+|         lane_mem[5].u_weight                                       |                          ac_mem16__6 |          1 |          1 |       0 |    0 |    28 |      0 |      1 |    0 |          0 |
+|         lane_mem[6].u_k_even                                       |                     ac_row_store__25 |          1 |          1 |       0 |    0 |    25 |      0 |      1 |    0 |          0 |
+|         lane_mem[6].u_k_odd                                        |                     ac_row_store__27 |          1 |          1 |       0 |    0 |    25 |      0 |      1 |    0 |          0 |
+|         lane_mem[6].u_v_even                                       |                     ac_row_store__26 |          1 |          1 |       0 |    0 |    21 |      0 |      1 |    0 |          0 |
+|         lane_mem[6].u_v_odd                                        |                     ac_row_store__28 |          1 |          1 |       0 |    0 |    23 |      0 |      1 |    0 |          0 |
+|         lane_mem[6].u_weight                                       |                          ac_mem16__7 |          1 |          1 |       0 |    0 |    28 |      0 |      1 |    0 |          0 |
+|         lane_mem[7].u_k_even                                       |                     ac_row_store__29 |          1 |          1 |       0 |    0 |    25 |      0 |      1 |    0 |          0 |
+|         lane_mem[7].u_k_odd                                        |                     ac_row_store__31 |          1 |          1 |       0 |    0 |    25 |      0 |      1 |    0 |          0 |
+|         lane_mem[7].u_v_even                                       |                     ac_row_store__30 |          1 |          1 |       0 |    0 |    22 |      0 |      1 |    0 |          0 |
+|         lane_mem[7].u_v_odd                                        |                     ac_row_store__32 |          1 |          1 |       0 |    0 |    22 |      0 |      1 |    0 |          0 |
+|         lane_mem[7].u_weight                                       |                          ac_mem16__8 |          1 |          1 |       0 |    0 |    28 |      0 |      1 |    0 |          0 |
+|         lane_mem[8].u_k_even                                       |                     ac_row_store__33 |          1 |          1 |       0 |    0 |    25 |      0 |      1 |    0 |          0 |
+|         lane_mem[8].u_k_odd                                        |                     ac_row_store__35 |          1 |          1 |       0 |    0 |    25 |      0 |      1 |    0 |          0 |
+|         lane_mem[8].u_v_even                                       |                     ac_row_store__34 |          1 |          1 |       0 |    0 |    21 |      0 |      1 |    0 |          0 |
+|         lane_mem[8].u_v_odd                                        |                     ac_row_store__36 |          1 |          1 |       0 |    0 |    23 |      0 |      1 |    0 |          0 |
+|         lane_mem[8].u_weight                                       |                          ac_mem16__9 |          1 |          1 |       0 |    0 |    28 |      0 |      1 |    0 |          0 |
+|         lane_mem[9].u_k_even                                       |                     ac_row_store__37 |          1 |          1 |       0 |    0 |    25 |      0 |      1 |    0 |          0 |
+|         lane_mem[9].u_k_odd                                        |                     ac_row_store__39 |          1 |          1 |       0 |    0 |    25 |      0 |      1 |    0 |          0 |
+|         lane_mem[9].u_v_even                                       |                     ac_row_store__38 |          1 |          1 |       0 |    0 |    24 |      0 |      1 |    0 |          0 |
+|         lane_mem[9].u_v_odd                                        |                     ac_row_store__40 |          1 |          1 |       0 |    0 |    18 |      0 |      1 |    0 |          0 |
+|         lane_mem[9].u_weight                                       |                         ac_mem16__10 |          1 |          1 |       0 |    0 |    28 |      0 |      1 |    0 |          0 |
+|         scale_bank[0].scale_parity[0].u_scale                      |                         ac_mem16__33 |          1 |          1 |       0 |    0 |    28 |      0 |      1 |    0 |          0 |
+|         scale_bank[0].scale_parity[1].u_scale                      |                         ac_mem16__34 |          1 |          1 |       0 |    0 |    28 |      0 |      1 |    0 |          0 |
+|         scale_bank[1].scale_parity[0].u_scale                      |                         ac_mem16__35 |          1 |          1 |       0 |    0 |    28 |      0 |      1 |    0 |          0 |
+|         scale_bank[1].scale_parity[1].u_scale                      |                             ac_mem16 |          1 |          1 |       0 |    0 |    28 |      0 |      1 |    0 |          0 |
+|         u_bias                                                     |                          ac_mem_bias |          5 |          5 |       0 |    0 |    46 |      0 |      4 |    0 |          0 |
+|         u_x                                                        |                            ac_pair_x |        299 |        299 |       0 |    0 |    91 |      0 |     16 |    0 |          0 |
+|       u_decoder                                                    |                  w4_parameter_decode |        135 |        135 |       0 |    0 |     0 |      0 |      0 |    0 |          0 |
+|   g_keyword_ui.u_scene                                             |                  an970_keyword_scene |       1964 |       1964 |       0 |    0 |   236 |      2 |      1 |    0 |          0 |
+|     (g_keyword_ui.u_scene)                                         |                  an970_keyword_scene |        867 |        867 |       0 |    0 |   186 |      0 |      0 |    0 |          0 |
+|     u_backdrop                                                     |           an970_competition_backdrop |        127 |        127 |       0 |    0 |    23 |      1 |      0 |    0 |          0 |
+|     u_detail                                                       |             an970_competition_detail |        871 |        871 |       0 |    0 |     9 |      0 |      1 |    0 |          0 |
+|     u_text                                                         |               an970_competition_text |         99 |         99 |       0 |    0 |    18 |      1 |      0 |    0 |          0 |
+|   u_clock                                                          |                          board_clock |          0 |          0 |       0 |    0 |     4 |      0 |      0 |    0 |          0 |
+|   u_key                                                            |                            board_key |         18 |         18 |       0 |    0 |    23 |      0 |      0 |    0 |          0 |
+|   u_lcd                                                            |                         an970_raster |         60 |         60 |       0 |    0 |    70 |      0 |      0 |    0 |          0 |
+|   u_uart                                                           |                            uart_byte |         40 |         40 |       0 |    0 |    50 |      0 |      0 |    0 |          0 |
++--------------------------------------------------------------------+--------------------------------------+------------+------------+---------+------+-------+--------+--------+------+------------+
+* Note: The sum of lower-level cells may be larger than their parent cells total, due to cross-hierarchy LUT combining
+
+

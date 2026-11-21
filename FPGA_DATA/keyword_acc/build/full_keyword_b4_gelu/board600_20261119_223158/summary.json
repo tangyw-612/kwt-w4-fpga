@@ -1,0 +1,81 @@
+{
+  "board": "AXU2CG-E",
+  "profile": "full_keyword_b4_gelu",
+  "port": "COM7",
+  "samples": 600,
+  "matched_offline": 600,
+  "correct": 585,
+  "serial_seconds_mean": 5.223935,
+  "total_transaction_seconds": 3134.361,
+  "active_cycles": {
+    "965557": 600
+  },
+  "misclassified": [
+    78,
+    82,
+    149,
+    228,
+    349,
+    353,
+    380,
+    387,
+    408,
+    463,
+    484,
+    500,
+    507,
+    509,
+    530
+  ],
+  "offline_differences": [],
+  "by_class": {
+    "_silence_": {
+      "correct": 50,
+      "samples": 50
+    },
+    "_unknown_": {
+      "correct": 46,
+      "samples": 50
+    },
+    "yes": {
+      "correct": 50,
+      "samples": 50
+    },
+    "no": {
+      "correct": 48,
+      "samples": 50
+    },
+    "up": {
+      "correct": 49,
+      "samples": 50
+    },
+    "down": {
+      "correct": 50,
+      "samples": 50
+    },
+    "left": {
+      "correct": 49,
+      "samples": 50
+    },
+    "right": {
+      "correct": 50,
+      "samples": 50
+    },
+    "on": {
+      "correct": 49,
+      "samples": 50
+    },
+    "off": {
+      "correct": 47,
+      "samples": 50
+    },
+    "stop": {
+      "correct": 49,
+      "samples": 50
+    },
+    "go": {
+      "correct": 48,
+      "samples": 50
+    }
+  }
+}

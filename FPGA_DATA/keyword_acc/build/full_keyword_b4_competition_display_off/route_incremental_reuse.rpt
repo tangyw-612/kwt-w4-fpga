@@ -1,0 +1,164 @@
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+| Date         : Fri Nov 20 02:37:03 2026
+| Host         : DESKTOP-630O49F running 64-bit major release  (build 9200)
+| Command      : report_incremental_reuse -file D:/key_transformer_dot/FPGA_DATA/keyword_acc/build/full_keyword_b4_competition_display_off/route_incremental_reuse.rpt
+| Design       : keyword_acc_top
+| Device       : xczu2cg
+| Design State : Fully Routed
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Incremental Implementation Information
+
+Table of Contents
+-----------------
+1. Incremental Flow Summary
+2. Reuse Summary
+3. Reference Checkpoint Information
+4. Comparison with Reference Run
+5. Optimization Comparison With Reference Run
+5.1 iphys_opt_replay Optimizations
+5.2 QoR Suggestion Optimizations
+6. Command Comparison with Reference Run
+6.1 Reference:
+6.2 Incremental:
+7. Non Reuse Information
+
+1. Incremental Flow Summary
+---------------------------
+
++-----------------------+------------------+
+|    Flow Information   |       Value      |
++-----------------------+------------------+
+| Synthesis Flow        |          Default |
+| Auto Incremental      |               No |
+| Incremental Directive | RuntimeOptimized |
+| Reuse mode            |             High |
+| Target WNS            |              0.0 |
+| QoR Suggestions       |                0 |
++-----------------------+------------------+
+
+
+2. Reuse Summary
+----------------
+
++-------+------------------------------+------------------------------------+----------------------------+--------------------+--------+
+|  Type | Matched % (of Initial Total) | Initial Reuse % (of Initial Total) | Current Reuse % (of Total) | Fixed % (of Total) |  Total |
++-------+------------------------------+------------------------------------+----------------------------+--------------------+--------+
+| Cells |                        99.88 |                              99.83 |                      99.83 |               0.04 |  90117 |
+| Nets  |                        99.97 |                              99.62 |                      99.37 |               0.00 |  77308 |
+| Pins  |                            - |                              99.54 |                      99.06 |                  - | 365797 |
+| Ports |                       100.00 |                             100.00 |                     100.00 |             100.00 |     35 |
++-------+------------------------------+------------------------------------+----------------------------+--------------------+--------+
+
+
+3. Reference Checkpoint Information
+-----------------------------------
+
++----------------+------------------------------------------------------------------------------------------------------------------------+
+| DCP Location:  | D:/key_transformer_dot/FPGA_DATA/keyword_acc/build/full_keyword_b4_competition_clear_large/keyword_acc_full_routed.dcp |
++----------------+------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------+----------------------------+
+|         DCP Information        |            Value           |
++--------------------------------+----------------------------+
+| Vivado Version                 |                     2020.2 |
+| DCP State                      |                 POST_ROUTE |
+| Recorded WNS                   |                      4.600 |
+| Recorded WHS                   |                      0.010 |
+| Reference Speed File Version   | PRODUCTION 1.29 08-03-2020 |
+| Incremental Speed File Version | PRODUCTION 1.29 08-03-2020 |
++--------------------------------+----------------------------+
+* Recorded WNS/WHS timing numbers are estimated timing numbers. They may vary slightly from sign-off timing numbers.
+
+
+4. Comparison with Reference Run
+--------------------------------
+
++-----------------+---------------------------+---------------------------+---------------------------+
+|                 |          WNS(ns)          |  Runtime(elapsed)(hh:mm)  |    Runtime(cpu)(hh:mm)    |
++-----------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|      Stage      |  Reference  | Incremental |  Reference  | Incremental |  Reference  | Incremental |
++-----------------+-------------+-------------+-------------+-------------+-------------+-------------+
+| synth_design    |             |             |       00:01 |     < 1 min |       00:01 |     < 1 min |
+| opt_design      |             |             |       00:01 |       00:01 |       00:02 |       00:02 |
+| read_checkpoint |             |             |             |       00:01 |             |       00:02 |
+| place_design    |       4.705 |       7.652 |       00:03 |       00:02 |       00:06 |       00:04 |
+| route_design    |       4.600 |       7.652 |       00:03 |       00:02 |       00:06 |       00:04 |
++-----------------+-------------+-------------+-------------+-------------+-------------+-------------+
+
+
+5. Optimization Comparison With Reference Run
+---------------------------------------------
+
+5.1 iphys_opt_replay Optimizations
+----------------------------------
+
++-------------------------+--------+------------+
+| iphys_opt_design replay | Reused | Not Reused |
++-------------------------+--------+------------+
+| create_bufg             |      5 |          0 |
+| equ_drivers_opt         |     22 |          0 |
++-------------------------+--------+------------+
+
+
+5.2 QoR Suggestion Optimizations
+--------------------------------
+
++-------------------------------------+-------+
+|           QoR Suggestions           | Value |
++-------------------------------------+-------+
+| QoR Suggestions (Recommended)       |     0 |
+|   Suggestions Included In Reference |     0 |
+|     Yet to apply                    |     0 |
+|     Applied                         |     0 |
+|     Failed to apply                 |     0 |
+|   New Suggestions (INCR_FRIENDLY=1) |     0 |
+|     Yet to apply                    |     0 |
+|     Applied                         |     0 |
+|     Failed to apply                 |     0 |
+| QoR Suggestions (Not Recommended)   |     0 |
+|   New Suggestions (INCR_FRIENDLY=0) |     0 |
+|     Yet to apply                    |     0 |
+|     Applied                         |     0 |
+|     Failed to apply                 |     0 |
+| Disabled New Suggestions            |     0 |
++-------------------------------------+-------+
+
+
+6. Command Comparison with Reference Run
+----------------------------------------
+
+6.1 Reference:
+--------------
+synth_design-flatten_hierarchy none -verilog_define default::[not_specified] -top  keyword_acc_top -part  xczu2cg-sfvc784-1-e 
+opt_design
+place_design
+route_design
+
+6.2 Incremental:
+----------------
+synth_design-flatten_hierarchy none -verilog_define default::[not_specified] -top  keyword_acc_top -part  xczu2cg-sfvc784-1-e 
+opt_design
+read_checkpoint -directive RuntimeOptimized  -incremental D:/key_transformer_dot/FPGA_DATA/keyword_acc/build/full_keyword_b4_competition_clear_large/keyword_acc_full_routed.dcp
+place_design
+route_design
+
+7. Non Reuse Information
+------------------------
+
++------------------------------------------------------+------+
+|                         Type                         |   %  |
++------------------------------------------------------+------+
+| Non-Reused Cells                                     | 0.16 |
+|   New                                                | 0.10 |
+|   Discarded illegal placement due to netlist changes | 0.04 |
+|   Discarded to improve timing                        | 0.01 |
+| Partially reused nets                                | 0.00 |
+| Non-Reused nets                                      | 0.62 |
+| Non-Reused Ports                                     | 0.00 |
++------------------------------------------------------+------+
+
+

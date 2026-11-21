@@ -1,0 +1,2 @@
+{"mode": "keyword", "sample_id": 408, "transaction": 65087, "prediction": "_unknown_", "class_id": 1, "layers": 12, "cycles": 150476060, "wait_cycles": 149510503, "active_cycles": 965557, "elapsed_seconds": 5.288, "reference": "_unknown_", "matches_reference": true}
+{"mode": "keyword", "sample_id": 104, "transaction": 50045, "prediction": "up", "class_id": 4, "layers": 12, "cycles": 150276134, "wait_cycles": 149310577, "active_cycles": 965557, "elapsed_seconds": 5.282, "reference": "up", "matches_reference": true}
