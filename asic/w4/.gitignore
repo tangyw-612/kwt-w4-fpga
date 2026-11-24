@@ -1,0 +1,8 @@
+build/
+obj_dir/
+__pycache__/
+*.pyc
+*.wlf
+*.vcd
+*.vvp
+transcript

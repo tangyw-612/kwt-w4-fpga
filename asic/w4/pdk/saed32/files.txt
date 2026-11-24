@@ -1,0 +1,17 @@
+lib/sram/verilog/saed32sram.v
+lib/stdcell_rvt/db_nldm/saed32rvt_tt1p05v25c.db
+lib/stdcell_rvt/db_nldm/saed32rvt_ss0p95v125c.db
+lib/stdcell_rvt/db_nldm/saed32rvt_ff1p16vn40c.db
+lib/sram/db_nldm/saed32sram_tt1p05v25c.db
+lib/sram/db_nldm/saed32sram_ss0p95v125c.db
+lib/sram/db_nldm/saed32sram_ff1p16vn40c.db
+lib/stdcell_rvt/ndm/saed32rvt_c.ndm
+lib/sram/ndm/saed32sram_c.ndm
+tech/milkyway/saed32nm_1p9m_mw.tf
+tech/star_rcxt/saed32nm_1p9m_Cmin.tluplus
+tech/star_rcxt/saed32nm_1p9m_Cmax.tluplus
+tech/star_rcxt/saed32nm_tf_itf_tluplus.map
+tech/milkyway/saed32nm_1p9m_gdsout_mw.map
+lib/stdcell_rvt/gds/saed32nm_rvt_oa.gds
+lib/sram/gds/SRAM1RW128x8.gds
+lib/sram/gds/SRAM1RW1024x8.gds

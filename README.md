@@ -2,6 +2,8 @@
 
 开发板为 ALINX AXU2CG-E，显示屏为 AN970。比赛最终大字版在 FPGA 上运行 W4 十二层编码器和分类头，上位机经 J8 串口下发特征与参数，并显示板端回传的分类结果。
 
+ASIC RTL、E203 NICE 接口和工艺适配见 [W4 ASIC](asic/w4/README.md)。
+
 ## 使用比赛位流
 
 在仓库根目录打开 PowerShell。AN970 接 J45，PL UART 接 J8，JTAG 下载器接电脑。下列命令中的 Vivado 安装路径和串口号按本机修改。
